@@ -1,0 +1,252 @@
+@import '~sass/_variables.scss';
+
+.app-sidebar{
+  width: $side-nav-width;
+  min-width: $side-nav-width;
+  max-width: $side-nav-width;
+}
+
+.side-nav {
+  width: $side-nav-width;
+  background-color: $sidebar-bg-darken !important;
+  color: $sidebar-text-color !important;
+  z-index: 1250 !important;
+  height: 100vh;
+  .sidebar-logo{
+    height: $app-bar-height;
+    background-color: $sidebar-bg-darken;
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
+    img{
+      height: 40px;
+      border-radius: 100%;
+      border: 1px solid white;
+    }
+  }
+}
+
+
+/*Navbar Styles*/
+ul.nav-menu {
+  position: relative;
+  font-size: $font-size-base;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul.nav-menu li.menu {
+  position: relative;
+  margin-bottom: 1px;
+  padding: 5px 10px;
+}
+
+ul.nav-menu li.menu {
+  & + .nav-header {
+    margin-top: 40px;
+  }
+  & .sub-menu {
+    display: none;
+  }
+  &.open > .sub-menu {
+    display: block;
+  }
+
+  &.open {
+    & .menu.active > .sub-menu {
+      display: block;
+    }
+  }
+}
+
+ul.nav-menu li a {
+  color: $sidebar-text-color;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-decoration: none;
+  border-radius: 3px;
+
+  & .badge {
+    margin-bottom: 0;
+    padding: 3px 8px 2px;
+  }
+}
+
+ul.nav-menu {
+  padding-top: 5px;
+  & .nav-header {
+    color: $sidebar-text-color;
+    padding: 4px 22px;
+    font-size: 11px;
+    text-transform: uppercase;
+
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
+}
+
+ul.nav-menu > li.selected > a,
+ul.nav-menu > li > a:hover,
+ul.nav-menu > li > a:focus {
+  background-color: $sidebar-hover-bg-color
+}
+
+ul.nav-menu li.menu > a:focus{
+  background-color: transparent
+}
+
+ul.nav-menu li.menu > a {
+  padding: 16px 20px;
+}
+
+ul.nav-menu li.menu > a.active {
+  background-color: $sidebar-hover-bg-color
+}
+
+ul.nav-menu li i {
+  margin-right: 12px;
+  font-size: 15px;
+}
+
+ul.nav-menu li ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+ul.nav-menu li ul.sub-menu li {
+  padding: 5px 0;
+}
+
+ul.nav-menu li ul.sub-menu li > a {
+  padding: 16px 20px 16px 56px;
+}
+
+ul.nav-menu li ul.sub-menu li > a[aria-current="page"] {
+  background: $sidebar-hover-bg-color;
+}
+
+ul.nav-menu li ul.sub-menu > li > ul > li > a {
+  padding-left: 76px;
+}
+
+ul.nav-menu li ul.sub-menu > li > ul > li > ul > li > a {
+  padding-left: 96px;
+}
+
+ul.nav-menu li ul.sub-menu > li > ul > li > ul > li > ul > li > a {
+  padding-left: 116px;
+}
+
+ul.nav-menu li.menu > a:before {
+  color: $sidebar-text-color;
+  content: "\f105";
+  display: inline-block;
+  float: right;
+  font-family: "Font Awesome 5 Free";
+  font-size: 15px;
+  margin-left: 10px;
+  position: relative;
+  @include transition(all 300ms ease-in-out);
+  font-weight: 900;
+}
+ul.nav-menu li.menu.no-arrow > a:before {
+  display: none;
+}
+
+ul.nav-menu li.menu.open > a:before,
+ul.nav-menu li.menu.active > a:before {
+  @include rotate(90deg);
+}
+
+ul.nav-menu li.menu .sub-menu li > a.active .nav-text {
+  color: white;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+ul.nav-menu li.menu .sub-menu li > a:hover,
+ul.nav-menu li.menu .sub-menu li > a:focus{
+  background-color: $sidebar-hover-bg-color
+}
+
+.customizer {
+  padding: 20px 35px;
+  & img {
+    padding: 5px;
+    cursor: pointer;
+  }
+}
+
+.rc-drawer {
+  &-left &-sidebar,
+  &-right &-sidebar {
+    height: 100vh;
+  }
+}
+
+.rc-drawer-sidebar {
+  position: fixed;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+
+  .rc-drawer.rc-drawer-left & {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    z-index: 903;
+  }
+
+  .rc-drawer.rc-drawer-right & {
+    right: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    z-index: 903;
+  }
+
+  .rc-drawer.rc-drawer-top & {
+    z-index: 903;
+  }
+
+  .rc-drawer.rc-drawer-bottom & {
+    z-index: 903;
+  }
+}
+
+.drawer-container {
+  position: relative;
+  & .main {
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.rc-drawer-overlay {
+  z-index: 902;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  min-width: 100% !important;
+}
+
+.app-sidebar {
+  &.rc-drawer.rc-drawer-docked {
+    position: relative;
+  }
+}

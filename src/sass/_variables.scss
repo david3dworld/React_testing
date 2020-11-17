@@ -1,0 +1,31 @@
+$side-nav-width: 280px;
+$app-bar-height: 70px;
+$app-primary: #896fb0;
+$sidebar-bg-darken: #363636;
+$sidebar-hover-bg-color: $app-primary;
+$sidebar-hover-color: $app-primary;
+$sidebar-text-color: white;
+$font-size-base: 1rem !default; 
+$border-radius: .25rem !default;
+$border-color: #d7d7fa;
+$primary: #896fb0;
+$transition-base: all .2s ease-in-out !default;
+
+
+
+@mixin transition($transition...) {
+	@if length($transition)==0 {
+		transition: $transition-base;
+	}
+
+	@else {
+		transition: $transition;
+	}
+}
+
+@mixin rotate($degrees) {
+	-webkit-transform: rotate($degrees);
+	-ms-transform: rotate($degrees); // IE9 only
+	-o-transform: rotate($degrees);
+	transform: rotate($degrees);
+}

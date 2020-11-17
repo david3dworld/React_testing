@@ -1,0 +1,26 @@
+[
+    {
+        "name": "United State",
+        "cities": [
+            "New York",
+            "Los Angeles",
+            "Chicago",
+            "Houston",
+            "Phoenix",
+            "Philadelphia"
+        ]
+    }, 
+    {
+        "name": "China",
+        "cities": [
+            "Shanghai",
+            "Beijing",
+            "Chongging",
+            "Tianjin",
+            "Shenyang",
+            "Nanjing"
+        ]
+    }
+    
+]
+    

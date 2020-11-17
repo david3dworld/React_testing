@@ -1,0 +1,30 @@
+@import '~sass/_variables.scss';
+#promo-page{
+    width: 70%;
+    margin: auto;
+    
+
+    .header {
+        background: transparent;
+        border-bottom: none;
+
+        h3 {
+            font-size: 39px;
+        }
+
+        &>div {
+            display: flex;
+
+            input {
+                width: 200px;
+                margin-right: 5px;
+                font-size: 15px;
+            }
+        }
+        
+        button {
+            font-size: 19px;
+            width: 150px;
+        }
+    }
+}

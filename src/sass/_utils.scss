@@ -1,0 +1,15 @@
+#route-content{
+    padding-left: $side-nav-width;
+    @media screen and (max-width: 1200px) {
+        padding-left: 0 !important
+    }
+}
+
+.pointer{
+    cursor: pointer !important;
+}
+
+.notify-success{
+    background-color: #13e293;
+}
+

@@ -1,0 +1,54 @@
+@import '~sass/_variables.scss';
+.promo-item {
+  background: white;
+  border: solid 1px #e2e5ec;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  .title {
+    font-size: 29px
+  }
+
+  .description {
+    font-size: 15px;
+    color: #7d7d7d;
+    margin-top: 10px;
+  }
+
+  label {
+    font-size: 11px;
+    color: #7d7d7d;
+  }
+
+  .promocode {
+    display: flex;
+
+    &>div {
+      border: solid 1px #CFD2D9;
+      border-radius: 4px;
+      padding: 12px 12px;
+      flex-grow: 1;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+
+      span {
+        flex-grow: 1;
+      }
+
+      a {
+        color: #0085FF !important;
+        cursor: pointer;
+      }
+    }
+
+    button {
+      flex-grow: 1;
+      margin-left: 20px;
+      font-size: 19px;
+      background-color: #0085FF;
+      border-color: #0085FF;
+    }
+  }
+}

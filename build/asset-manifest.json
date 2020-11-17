@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.31375574.chunk.css",
+    "main.js": "/static/js/main.f97801b4.chunk.js",
+    "main.js.map": "/static/js/main.f97801b4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.181cfa18.js",
+    "runtime-main.js.map": "/static/js/runtime-main.181cfa18.js.map",
+    "static/css/2.a2869a46.chunk.css": "/static/css/2.a2869a46.chunk.css",
+    "static/js/2.6a7a80bc.chunk.js": "/static/js/2.6a7a80bc.chunk.js",
+    "static/js/2.6a7a80bc.chunk.js.map": "/static/js/2.6a7a80bc.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d39a4ed0f368f0c2d364b9c1cb109baf.js": "/precache-manifest.d39a4ed0f368f0c2d364b9c1cb109baf.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.a2869a46.chunk.css.map": "/static/css/2.a2869a46.chunk.css.map",
+    "static/css/main.31375574.chunk.css.map": "/static/css/main.31375574.chunk.css.map",
+    "static/js/2.6a7a80bc.chunk.js.LICENSE.txt": "/static/js/2.6a7a80bc.chunk.js.LICENSE.txt",
+    "static/media/Tabler.css": "/static/media/zw.e223cee5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.181cfa18.js",
+    "static/css/2.a2869a46.chunk.css",
+    "static/js/2.6a7a80bc.chunk.js",
+    "static/css/main.31375574.chunk.css",
+    "static/js/main.f97801b4.chunk.js"
+  ]
+}
